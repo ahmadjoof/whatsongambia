@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head lang="en">
+
+    	<!-- Metadat -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    		        <!-- Latest compiled and minified CSS -->
+    		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    		<!-- jQuery library -->
+    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    		<!-- Latest compiled JavaScript -->
+    		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!--Firestore -->
+        <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+
+    		<!-- MAIN.CSS EXTERNAL STYLESHEET -->
+    		<link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+
+    		<!-- SLICK SETUP CSS STYLESHEET -->
+
+         <script type="text/javascript" src="jquery.js"></script>
+
+            <title>WOSG</title>
+            <style type="text/css"></style>
+      </head>
+
+<body>
+	<!-- HEADER -->
+  <nav id="header" class="navbar navbar-fixed-top nav-justified">
+		<div class="container-fluid">
+			<div class="float-left">
+				<a href="index.php"><img src="icons8_News_48px.png" id="mainImageLogo" class="scaled"></a>
+				<a href="videonews.html"><button type="button" class="btn btn-default btn-sm" id="main-buttons">All</button></a>
+				<button type="button" class="btn btn-default btn-sm" id="main-buttons">Read</button>
+				<button type="button" class="btn btn-default btn-sm" id="main-buttons">Unread</button>
+				<img src="icons8_Sync_48px_1.png" width="30" height="30" id="refreshImage" class="scaled">
+				<input type="text" name="searchWog" id="searchMain">
+				<img src="icons8_Settings_48px_1.png" width="30" height="30" id="settingsImage" class="scaled">
+				<img src="icons8_Party_48px_1.png" width="30" height="30" id="ratingImage" class="scaled">
+				<img src="icons8_Hand_With_Pen_48px_1.png" width="30" height="30" id="reportImage" class="scaled">
+				<img src="icons8_Administrator_Male_48px_1.png" width="40" height="40" id="adminImage" class="scaled">
+				<img src="icons8_Male_User_48px_1.png" width="40" height="40" id="profileImage" class="scaled">
+				<img src="icons8_Comments_48px_1.png" width="40" height="40" id="commentImage" class="scaled">
+			</div>
+		</div>
+	</nav>
+
+		<div class="row">
+			<div class="col-sm-2 container-fluid" style="border-right: 1px grey solid; height: 822px; padding-right: 0px; margin: 0px;">
+        <div id="left-container" style="padding-top: 40px;">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<div class="img" id="top-pane">
+    						<p><img src="icons8_News_48px.png" width="100" height="100"></p>
+    						<div class="title-header">WOG</div>
+    					</div>
+    					<div class="container-fluid img" id="Articles">
+    						<h6><img src="icons8_Magazine_48px_1.png" width="20" height="20"> Articles</h6>
+    					</div>
+
+    					<div class="dropdown img" id="category" style="padding-top: 10px; padding-bottom: 10px; border-bottom: gray solid;">
+    						<h5><img src="icons8_Sorting_48px_3.png">Category<span class="caret"></span></h5>
+    					</div>
+
+    					<div class="img" id="NastechApplications" style="padding-top: 10px; padding-bottom: 10px; border-bottom: gray solid;" >
+    						<h5><img src="icons8_Video_Conference_48px.png">Nastech Inc Applications<span class="caret"></span></h5>
+    					</div>
+
+    					<div class="img" id="vidoesAndMusic" style="padding-top: 10px; padding-bottom: 10px; border-bottom: gray solid;">
+    						<h5><img src="icons8_Circled_Play_48px.png">Videos<span class="caret"></span></h5>
+    					</div>
+
+              <!--
+              <div id="popover-content" style="display: none;">
+                <ul class="list-group custom-popover">
+                  <li class="list-group-item">hello</li>
+                </ul>
+              </div>
+            -->
+
+    					<div class="img" data-toggle="modal" data-target="#joinOurTeamModal" id="joinOurTeam" style="padding-top: 10px; padding-bottom: 10px; border-bottom: gray solid;">
+    						<h5><img src="icons8_Team_48px_1.png">Join Our Team</h5>
+    					</div>
+
+              <!-- THE MODAL JOIN OUR TEAM -->
+              <div id="joinOurTeamModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <div class="modal-title" style="text-align: center;"><img src="icons8_News_48px.png"></div>
+                      <div class="wosg-title-text-modal" style="text-align: center;">It's cool outside...Enter!</div>
+                      <div class="list-information-modal">
+                        <div><img src="icons8_Circle_48px_2.png">Simply access all Gambian News and Entertainment</div>
+                        <div><img src="icons8_Circle_48px_2.png">Access your own account to feed news</div>
+                        <div><img src="icons8_Circle_48px_2.png">Share it to the world</div>
+                      </div>
+                    </div>
+
+                    <!-- THE TAB PANES -->
+                    <div class="modal-body" style=" padding:0px; margin: 0px;">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <ul class="nav nav-tabs nav-justified">
+                            <li class="active"><a data-toggle="tab" href="#loginModal"><img src="icons8_Male_User_48px_1.png"> Login</a></li>
+                            <li><a data-toggle="tab" href="#signUpModal"><img src="icons8_Administrator_Male_48px_1.png"> Sign Up</a></li>
+                            <li><a data-toggle="tab" href="#beAReporterModal"><img src="icons8_Report_Card_48px_1.png"> Be a reporter</a></li>
+                          </ul>
+
+                          <div class="tab-content">
+                            <!--Login Modal Tab -->
+                            <div id="loginModal" class="tab-pane fade in active">
+                              <div class="row" style="padding-left: 10px; padding-right: 15px;">
+                                <div class="col-sm-8" style="border-right: 1px solid grey;">
+                                  <form action="action_page.js">
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Name_48px_1.png" width="30" height="17"></span>
+                                      <input type="name" name="fullName" class="form-control" id="fullName" placeholder="Full Name">
+                                    </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Email_48px.png" width="30" height="17"></span>
+                                      <input type="email" name="emailAddress" class="form-control" id="emailAddress" placeholder="Email address">
+                                    </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Password_48px.png" width="30" height="17"></span>
+                                      <input type="password" name="passwordField" class="form-control" id="passwordField" placeholder="Password">
+                                    </div>
+                                    <div class="row" style="padding-left: 7px; padding-right:5px;">
+                                      <div class="col-sm-4 loginButton">Login</div>
+                                      <div class="col-sm-3"><div class="login-with">or login with</div></div>
+                                      <div class="col-sm-5" id="facebookAndGoogleLogin">
+                                        <img src="icons8_Facebook_48px_2.png" width="40" height="40">
+                                      </div>
+                                    </div>
+                                  </form>
+                                </div>
+                                <div class="col-sm-4" style="padding: 0px; padding-left: 6px;">
+                                  <div class="content information-of-inputs">hell world</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--Sign Up Modal Tab -->
+                            <div id="signUpModal" class="tab-pane fade">
+                               <div class="row" style="padding-left: 10px; padding-right: 15px;">
+                                <div class="col-sm-8" style="border-right: 1px solid grey;">
+                                  <form action="action_page.js">
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Name_48px_1.png" width="30" height="17"></span>
+                                      <input type="name" name="fullName" class="form-control" id="fullName" placeholder="Full Name">
+                                    </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Email_48px.png" width="30" height="17"></span>
+                                      <input type="email" name="emailAddress" class="form-control" id="emailAddress" placeholder="Email address">
+                                    </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Password_48px.png" width="30" height="17"></span>
+                                      <input type="password" name="passwordField" class="form-control" id="passwordField" placeholder="Password">
+                                    </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Password_48px.png" width="30" height="17"></span>
+                                      <input type="password" name="confirmedPassword" class="form-control" id="confirmedPassword" placeholder="Confrimed password">
+                                    </div>
+                                    <div class="row" style="padding-left: 7px; padding-right:5px;">
+                                      <div class="col-sm-4 loginButton">Sign Up</div>
+                                      <div class="col-sm-3"><div class="login-with">or login with</div></div>
+                                      <div class="col-sm-5" id="facebookAndGoogleLogin">
+                                        <img src="icons8_Facebook_48px_2.png" width="40" height="40">
+                                      </div>
+                                    </div>
+                                  </form>
+                                </div>
+                                <div class="col-sm-4" style="padding: 0px; padding-left: 6px;">
+                                  <div class="content information-of-inputs">hell world</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--Be a reporter Modal Tab -->
+                            <div id="beAReporterModal" class="tab-pane fade">
+                               <div class="row" style="padding-left: 10px; padding-right: 15px;">
+                                <div class="col-sm-8" style="border-right: 1px solid grey;">
+                                  <form action="action_page.js">
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Name_48px_1.png" width="30" height="17"></span>
+                                      <input type="name" name="AdminName" class="form-control" id="AdminName" placeholder="Reporter Full Name">
+                                    </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Email_48px.png" width="30" height="17"></span>
+                                      <input type="email" name="reporterEmail" class="form-control" id="reporterEmail" placeholder="Email address">
+                                    </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Password_48px.png" width="30" height="17"></span>
+                                      <input type="password" name="passwordReporter" class="form-control" id="passwordReporter" placeholder="Password">
+                                    </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Password_48px.png" width="30" height="17"></span>
+                                      <input type="password" name="passwordConfirmedReporter" class="form-control" id="passwordConfirmedReporter" placeholder="Password">
+                                    </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Street_View_48px.png" width="30" height="17"></span>
+                                      <input type="address" name="reporterAddress" class="form-control" id="reporterAddress" placeholder="Street address">
+                                    </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_City_Hall_48px.png" width="30" height="17"></span>
+                                      <input type="city" name="reporterCity" class="form-control" id="reporterCity" placeholder="City">
+                                    </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Final_State_48px.png" width="30" height="17"></span>
+                                      <input type="state" name="reporterState" class="form-control" id="reporterState" placeholder="State">
+                                    </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Final_State_48px.png" width="30" height="17"></span>
+                                      <input type="province" name="reporterProvince" class="form-control" id="passwordField" placeholder="Province">
+                                    </div>
+                                    <div class="input-group">
+                                      <span class="input-group-addon"><img src="icons8_Gambia_48px_1.png" width="30" height="17"></span>
+                                      <input type="country" name="reporterCountry" class="form-control" id="reporterCountry" placeholder="Country">
+                                    </div>
+                                    <div class="row" style="padding-left: 7px; padding-right:5px;">
+                                      <div class="col-sm-4 loginButton w3-card">Be a reporter</div>
+                                      <div class="col-sm-8">
+                                        <form>
+                                          <label class="radio-inline"><img src="icons8_User_Group_48px.png" width="30" height="30"></label>
+                                          <label class="radio-inline"><input type="radio" name="maleUser">Male</label>
+                                          <label class="radio-inline"><input type="radio" name="femaleUser">Female</label>
+                                       </form>
+                                       <div class="form">
+                                         <label class="checkbox-inline" id="checkboxTermsAndServices"><input type="checkbox" value="termsAndServices">Agree to the <span style="color: blue;">terms and service</span></label>
+                                       </div>
+                                      </div>
+                                    </div>
+                                  </form>
+                                </div>
+                                <div class="col-sm-4" style="padding: 0px; padding-left: 6px;">
+                                  <div class="content information-of-inputs">hell world</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END OF TAB PANE -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <div class="wog-modal-footer" style="text-align: center;"><img src="icons8_Copyright_48px_3.png" width="20" height="20"> Copyright 2018 WOSG</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+    					<div class="logo_container container-fluid img" style="padding-top: 30px; padding-bottom: 30px; text-align: center;">
+    						<h6 class="label" id="createdBy">Created By:</h6>
+    						<div class="title" id="NasTechLogo" style="text-align: center;"> NasTech Inc</div>
+    						<img src="icons8_Batman_Logo_48px.png" width="150" height="30">
+    					</div>
+    				</div>
+    			</div>
+    	 	</div>
+			</div>
+			<div class="col-sm-3 container-fluid" id="center-container" style="overflow: auto; overflow-y: scroll; overflow-x: hidden; padding-top: 50px border-right: 1px grey solid; height: 822px;">
+        <div class="container-fluid" id="cen+-ter-container">
+                <div class="row" style="padding-top: 50px; padding-bottom: 30px; margin: 0px;">
+                  <div class="col-sm-6 wosg-news container-fluid"><img src="icons8_News_48px.png">WOSG News</div>
+                  <div class="col-sm-6 tonight-events container-fluid"><img src="icons8_TV_Program_48px.png">Tonight Events</div>
+                </div>
+                <div class="list container-fluid" id="latest-news-main"><h5 class="title"><img src="icons8_New_48px_1.png">Latest News</h5></div>
+                <div class="list container-fluid" id="exclsive-news-main"><h5><img src="icons8_Private_48px_1.png">Exclusive</h5></div>
+                <div class="list container-fluid" id="burning-news-main"><h5 class="title"><img src="icons8_Fire_48px_1.png">Burning Issues</h5></div>
+                <div class="list container-fluid" id="legal-affairs-main"><h5 class="title"><img src="icons8_Law_48px_1.png">Legal Affairs</h5></div>
+                <div class="list container-fluid" id="health-news-main"><h5 class="title"><img src="icons8_Mother's_Health_48px.png">Health</h5></div>
+                <div class="list container-fluid" id="science-news-main"><h5 class="title"><img src="icons8_Science_Fiction_48px_1.png">Science</h5></div>
+                <div class="list container-fluid" id="technologg-news-main"><h5 class="title"><img src="icons8_Technology_Lifestyle_48px_2.png">Technology</h5></div>
+                <div class="list container-fluid" id="education-news-main"><h5 class="title"><img src="icons8_Graduation_Cap_48px_1.png">Education</h5></div>
+                <div class="list container-fluid" id="politics-news-main"><h5 class="title"><img src="icons8_Poll_48px_1.png">Politics</h5></div>
+                <div class="list container-fluid" id="sports-news-main"><h5 class="title"><img src="icons8_World_Cup_48px_3.png">Sports</h5></div>
+                <div class="list container-fluid" id="artist-news-main"><h5 class="title"><img src="icons8_Tango_48px_1.png">Artist</h5></div>
+                <div class="list container-fluid" id="business-news-main"><h5 class="title"><img src="icons8_Business_48px.png">Business</h5></div>
+                <div class="list container-fluid" id="events-news-main"><h5 class="title"><img src="icons8_Schedule_48px_1.png">Events</h5></div>
+                <div class="list container-fluid" id="election-news-main"><h5 class="title"><img src="icons8_Elections_48px_2.png">Election</h5></div>
+                <div class="list container-fluid" id="music-news-main"><h5 class="title"><img src="icons8_Music_48px_1.png">Music</h5></div>
+                <div class="list container-fluid" id="arts-news-main"><h5 class="title"><img src="icons8_Attack_48px_1.png">Arts</h5></div>
+                <div class="list container-fluid" id="film-news-main"><h5 class="title"><img src="icons8_Rain_Cloud_48px.png">Climate Change</h5></div>
+                <div class="list container-fluid" id="food-news-main"><h5 class="title"><img src="icons8_Food_48px_1.png">Food</h5></div>
+                <div class="list container-fluid" id="social-history-news-main"><h5 class="title"><img src="icons8_Historical_48px_1.png">Social History</h5></div>
+                <div class="list container-fluid" id="social-media-news-main"><h5 class="title"><img src="icons8_Micro_48px_1.png">Social Media</h5></div>
+                <div class="list container-fluid" id="inpictures-news-main"><h5 class="title"><img src="icons8_Google_Images_48px_1.png">InPictures</h5></div>
+                <div class="list container-fluid" id="lifestyle-news-main"><h5 class="title"><img src="icons8_Yoga_48px_1.png">Life Style</h5></div>
+                <div class="list container-fluid" id="celebrities-news-main"><h5 class="title"><img src="icons8_Recent_Celebrity_48px_1.png">Celebrities</h5></div>
+                <div class="list container-fluid" id="gossip-news-main"><h5 class="title"><img src="icons8_User_Groups_48px_1.png">Gossip</h5></div>
+                <div class="list container-fluid" id="wog-news-main"><h5 class="title"><img src="icons8_News_48px.png">WOG</h5></div>
+                <div class="list container-fluid" id="BNL-news-main"><h5 class="title"><img src="icons8_Gambia_48px_1.png">Banjul Night Live</h5></div>
+        </div>
+			</div>
+
+			<div class="col-sm-2 container-fluid" style="border-right: 1px grey solid; height: 822px; overflow: auto; overflow-x: hidden; padding:0px; padding-top:60px;">
+        <div class="listview row card" id="listview1">
+          <div class="col-sm-5 card-body"><img src="dark-music-wallpaper.jpg" style="height:300; width:100%;"></div>
+            <div class="title-listview" id="title-listview">NasTech Inc<span><img src="icons8_Menu_Vertical_48px_4.png" width="20" height="20"></span></div>
+            <div class="date-listview" id="date-listview">10/20/2018 <span>|</span> <span id="category-listview">Technology</span></div>
+        </div>
+			</div>
+
+			<div class="col-sm-5 container-fluid" style="border-right: 1px grey solid; height: 822px; overflow: auto; overflow-x: hidden; padding-top: 50px;">
+        <div w3-include-html="videonews.html"></div>
+        <div class="title" id="tonight-events-right-title">Tonight events</div>
+			</div>
+		</div>
+	<!-- FOOTER -->
+
+  <div id="footer">
+    <div class="container-fluid">
+      <div class="row" id="main-row-footer">
+        <div class="col-sm-4" id="news-titles">
+          <div class="row">
+            <div class="title-news-category">News Category</div>
+            <div class="col-sm-6">
+              <ul class="menu w3-ul w3-card">
+                <li id="home"><img src="icons8_Home_48px.png" width="20" height="20" style="margin-right: 20px;">Home</li>
+                <li id="latest-news-footer"><img src="icons8_New_48px_1.png" width="20" height="20" style="margin-right: 20px;"> Latest News</li>
+                <li id="exclusive-news-footer"><img src="icons8_Private_48px_1.png" width="20" height="20" style="margin-right: 20px;">Exlusive</li>
+                <li id="burning-issues-footer"><img src="icons8_Fire_48px_1.png" width="20" height="20" style="margin-right: 20px;">Burning Issues</li>
+                <li id="legal-affairs-footer"><img src="icons8_Law_48px_1.png" width="20" height="20" style="margin-right: 20px;">Legal Affairs</li>
+                <li id="health-footer"><img src="icons8_Mother's_Health_48px.png" width="20" height="20" style="margin-right: 20px;">Health</li>
+                <li id="science-footer"><img src="icons8_Science_Fiction_48px_1.png" width="20" height="20" style="margin-right: 20px;">Science</li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <ul class="menu w3-ul w3-card">
+                <li id="technology-footer"><img src="icons8_Technology_Lifestyle_48px_2.png" width="20" height="20" style="margin-right: 20px;">Technology</li>
+                <li id="education-footer"><img src="icons8_Graduation_Cap_48px_1.png" width="20" height="20" style="margin-right: 20px;">Education</li>
+                <li id="politics-footer"><img src="icons8_Elections_48px_2.png" width="20" height="20" style="margin-right: 20px;">Politics</li>
+                <li id="artist-footer"><img src="icons8_Tango_48px_1.png" width="20" height="20" style="margin-right: 20px;">Artist</li>
+                <li id="music-footer"><img src="icons8_Music_48px_1.png" width="20" height="20" style="margin-right: 20px;">Music</li>
+                <li id="gossip-footer"><img src="icons8_User_Groups_48px_1.png" width="20" height="20" style="margin-right: 20px;">Gossip</li>
+                <li id="wog-footer"><img src="icons8_News_48px.png" width="20" height="20" style="margin-right: 20px;">WOG</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" id="account-information">
+          <div class="title-news-category">Account informations</div>
+          <ul class="menu w3-ul w3-card">
+            <li id="user-login-footer"><img src="icons8_Male_User_48px_1.png" width="20" height="20" style="margin-right: 20px;">Login As User</li>
+            <li id="repoter-login-footer"><img src="icons8_Administrator_Male_48px_1.png" width="20" height="20" style="margin-right: 20px;">Login As Reporter</li>
+            <li id="update-account-footer"><img src="icons8_Communicate_48px_1.png" width="20" height="20" style="margin-right: 20px;">Update Account</li>
+            <li id="forget-password-footer"><img src="icons8_Password_48px.png" width="20" height="20" style="margin-right: 20px;">Forget password</li>
+            <li id="advertise-on-wog"><img src="icons8_Commercial_48px_1.png" width="20" height="20" style="margin-right: 20px;">Advertise on WOG</li>
+            <li id="wog-latest-news-footer"><img src="icons8_Google_Alerts_48px.png" width="20" height="20" style="margin-right: 20px;">WOG latest news</li>
+            <li id="joining-our-community"><img src="icons8_Team_48px_1.png" width="20" height="20" style="margin-right: 20px;">Joining Our Community</li>
+          </ul>
+        </div>
+        <div class="col-sm-3" id="nastechinc-cool-stuff">
+          <div class="title-news-category">NasTech Inc Applications</div>
+          <ul class="menu w3-ul w3-card">
+            <li id="desktop-app-footer"><img src="icons8_Desktop_48px.png" width="20" height="20" style="margin-right: 20px;">Desktop Applications</li>
+            <li id="android-app-footer"><img src="icons8_Android_OS_48px.png" width="20" height="20" style="margin-right: 20px;">Android Applications</li>
+            <li id="ios-app-footer"><img src="icons8_iOS_Logo_48px_1.png" width="20" height="20" style="margin-right: 20px;">IOS Applications</li>
+            <li id="web-app-footer"><img src="icons8_Website_48px.png" width="20" height="20" style="margin-right: 20px;">Web Applications</li>
+            <li id="game-app-footer"><img src="icons8_Game_Controller_48px.png" width="20" height="20" style="margin-right: 20px;">Game Applications</li>
+            <li id="cyber-security-footer"><img src="icons8_Card_Security_48px.png" width="20" height="20" style="margin-right: 20px;">Cyber Security Solutions</li>
+          </ul>
+        </div>
+        <div class="col-sm-1" id="nastech-logo-footer" style="text-align: center;">
+          <h6 id="nastech-desc">WOG is a center for local and internationals news focusing on Senegambia with all music videos</h6>
+          <h5 style="text-align: center;" id="wog-desc-footer">WOG</h5>
+          <img src="icons8_News_48px.png" style="border-image-repeat: none;">
+        </div>
+      </div>
+      <div class="row" id="copyright-background" style="color: white; font-weight: bold; font-family: serif;">
+        <div class="col-sm-12" id="copyright"><img src="icons8_Copyright_48px_3.png" width="30" height="30">Copyright 2018 WOG</div>
+      </div>
+    </div>
+  </div>
+<!--SLICK SETUP -->
+
+  <script type="text/javascript" src="javascript.js"></script>
+  <script type="text/javascript" src="thedom.js"></script>
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <script>
+    w3.includeHTML();
+  </script>
+
+</body>
+</html>
