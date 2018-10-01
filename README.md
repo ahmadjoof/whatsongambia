@@ -1,2 +1,2 @@
-# whatsongambia
+# whatsongambia-web
 applications
