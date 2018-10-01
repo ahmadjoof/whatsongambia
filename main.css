@@ -1,0 +1,755 @@
+/*******************************
+MEDIA queries
+******************************/
+/* Extra small devices (portrait phones, less than 576px)
+ No media query since this is the default in Bootstrap*/
+
+/* Small devices (landscape phones, 576px and up)*/
+@media only screen and (min-width: 576px) {
+
+ }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+ }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+ }
+
+/******************************
+HEADER
+******************************/
+
+body{
+	height: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+#header{
+	background-color:   #ce405a;
+}
+
+.vertical_line{
+	border-right:  thick solid #ff0000;
+}
+
+#main-buttons{
+	font-weight: bolder;
+	width: 150px;
+	color: #ce405a;
+	font-family: "Britannic Bold";
+  max-width: 100%;
+  font-weight: bolder;
+  position: relative;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#main-buttons::after{
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#main-buttons:active::after{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+#main-buttons:hover{
+	background-color: #f96776;
+	color: #ffffff;
+}
+
+#refreshImage{
+}
+
+#searchMain{
+	border: 1px solid grey;
+	border-radius: 25px;
+	margin-left: 50px;
+}
+
+#ratingImage{
+	margin-left: 20px;
+}
+
+#commentImage{
+	float: right;
+	border-image-repeat: none;
+}
+
+#profileImage{
+	float: right;
+	border-image-repeat: none;
+}
+
+#adminImage{
+	float: right;
+	border-image-repeat: none;
+}
+
+.box{
+	background-color: gray;
+	width: 50px;
+	height: 25px;
+	border: 1px solid black;
+	display: inline-block;
+	margin: 0px;
+}
+
+.scaled:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+/******************************
+CONTENT
+******************************/
+
+#content{
+	margin: 0px;
+}
+
+#left-container{
+	background-color:   #f96776;
+	margin: 0px;
+	padding:0px;
+}
+
+#top-pane{
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 25px;
+}
+
+#Articles{
+	font-family: "serif";
+	text-align: center;
+	border-top:1px #ffffff solid;
+	border-bottom:1px #ffffff solid;
+	max-width: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-weight: bolder;
+	color: #ffffff;
+  position: relative;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#Articles::after{
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#Articles:active::after{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+#Articles:hover{
+  background-color: #ce405a;
+}
+
+#category{
+	color: #ffffff;
+	font-weight: bolder;
+	font-family: "serif";
+  max-width: 100%;
+  font-weight: bolder;
+  position: relative;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#category::after{
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#category:active::after{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+#category:hover{
+  background-color:#ce405a;
+}
+
+#NastechApplications{
+	color: #ffffff;
+	font-weight: bolder;
+	font-family: "serif";
+  max-width: 100%;
+  font-weight: bolder;
+  position: relative;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#NastechApplications::after{
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#NastechApplications:active::after{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+#NastechApplications:hover{
+  background-color:#ce405a;
+}
+
+#vidoesAndMusic{
+	color: #ffffff;
+	font-weight: bolder;
+	font-family: "serif";
+  max-width: 100%;
+  font-weight: bolder;
+  position: relative;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#vidoesAndMusic::after{
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#vidoesAndMusic:active::after{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+#vidoesAndMusic:hover{
+  background-color: #ce405a;
+}
+
+#joinOurTeam{
+	font-family: "Britannic Bold";
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  max-width: 100%;
+  font-weight: bolder;
+  position: relative;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#joinOurTeam::after{
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#joinOurTeam:active::after{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+#joinOurTeam:hover{
+  background-color:#ce405a;
+}
+
+#center-container{
+	border-right: 1px grey solid;
+	height: 822px;
+	padding: 0px;
+	margin: 0px;
+
+}
+
+#center-container::-webkit-scrollbar {
+    width: 0.3em;
+}
+
+#center-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+#center-container::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.wosg-news{
+	border-right:1px grey solid;
+	margin:0px;
+	padding: 0px;
+	color: #ce405a;
+	font-weight: bolder;
+  font-size: 15px;
+}
+
+.tonight-events{
+	color: #ce405a;
+	font-weight: bolder;
+  font-size: 15px;
+}
+
+.wosg-news:hover{
+	background-color: #ce405a;
+	color: #ffffff;
+}
+
+.tonight-events:hover{
+	background-color:#ce405a;
+	color: #ffffff;
+}
+
+#latest-news-main{
+	border-top:1px grey solid;
+	margin: 0px;
+}
+
+.list h5 img {
+	width:30px;
+	height:30px;
+	margin-right: 10px;
+}
+
+.list:hover{
+	background-color:  #ce405a;
+	color: #ffffff;
+}
+
+.list{
+	border-top:1px grey solid;
+	color:  #ce405a;
+	font-weight: bolder;
+	font-family: "serif";
+  max-width: 100%;
+  font-weight: bolder;
+  position: relative;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.list::after{
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.list:active::after{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.title-header{
+	font-family: "Britannic Bold";
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+}
+
+#NasTechLogo{
+	font-family:"Lucida Console", monospace;
+    font-size: 30px;
+    color: #064E40;
+}
+
+#listview-news{
+	height: 822px;
+	border-right: 1px grey solid;
+}
+
+#right-container{
+	height: 822px;
+	margin: 0px;
+	background-color: red;
+}
+
+.main-imageview-slider-for{
+	height: 300px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 150px;
+	padding: 0px;
+}
+
+
+.nav-images{
+	width:50px;
+	height: 100px;
+  padding-left: 20px;
+}
+
+.for-images{
+	margin:0px;
+	padding: 0px;
+	height: 300px;
+}
+
+#tonight-events-right-title{
+  padding-top: 20px;
+	margin-bottom: 10px;
+	font-family: monospace;
+	font-size: 20px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-bottom: 1px #ce405a solid;
+  color:  #ce405a;
+  font-weight: bolder;
+}
+
+.tonight-events-images-right_container{
+  padding-left: 20px;
+}
+
+.main-imageview-slider-nav{
+
+}
+
+.main-image-details-infor{
+	background-color: #ce405a;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+
+.main-image-title{
+	font-family: "serif";
+	font-weight: bold;
+	font-style: oblique;
+	font-size: 13px;
+	color: #ffffff;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 0px;
+	border-bottom: 1px grey solid;
+}
+
+.main-image-short-desc{
+	font-family: "serif";
+	font-style: oblique;
+	font-size: 15px;
+	color: #ffffff;
+}
+
+.main-image-date{
+	font-size: 12px;
+	font-family: monospace;
+	font-style: oblique;
+	color:#ffffff;
+	text-align: right;
+}
+
+#right-conatiner-subimage-style{
+	font-style: normal;
+	font-family: monospace;
+	color: #f96776;
+	font-size: 14px;
+}
+
+
+/******************************
+FOOTER
+******************************/
+
+#footer{
+	background-color:  #f96776;
+	color: yellow;
+}
+
+#main-row-footer{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#copyright{
+	text-align: center;
+}
+
+#nastech-desc{
+	text-align: center;
+	color: #ce405a;
+	font-family: "serif";
+}
+
+#wog-desc-footer{
+	font-family: "Britannic Bold";
+    color: white;
+   font-weight: bold;
+}
+
+#copyright-background{
+	background-color: #ce405a;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+#nastechinc-cool-stuff{
+
+}
+
+#account-information{
+	border-right: 1px white solid;
+}
+
+#news-titles{
+	border-right: 1px white solid;
+}
+
+#nastech-logo-footer{
+	border-left: 1px white solid;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.menu{
+	list-style-type: none;
+	font-weight: bold;
+	font-family: "serif";
+	color: white;
+}
+
+.menu li{
+  max-width: 100%;
+  font-weight: bolder;
+  position: relative;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.menu li::after{
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.menu li:active::after{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.title-news-category{
+	text-align: center;
+	padding-bottom: 15px;
+	font-weight: bold;
+  color: #ce405a;
+  font-size: 15px;
+}
+
+li{
+	padding-bottom: 5px;
+  font-family: "serif";
+}
+
+li:hover{
+	background-color: #ce405a;
+}
+
+#yellow{
+	color: yellow;
+}
+/**************************************
+Modals
+***************************************/
+.modal-footer{
+	background-color:#f96776;
+}
+
+.modal-header{
+	background-color: #ce405a;
+}
+.modal-title{
+	color: #ffffff;
+	font-family: monospace;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+.modal-body{
+
+}
+
+.wog-modal-footer{
+	color: #ffffff;
+	font-family: monospace;
+}
+
+.list-information-modal{
+	color: #ffffff;
+	font-family: serif;
+}
+
+.wosg-title-text-modal{
+	font-family: "Britannic Bold";
+	font-size: 25px;
+	color: #ffffff;
+	font-weight: bolder;
+}
+
+.loginButton{
+	background-color:#ce405a;
+	font-family: "Britannic Bold";
+	font-weight: bolder;
+	text-align: center;
+	color: #ffffff;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 20px;
+}
+
+.input-group{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.login-with{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#facebookAndGoogleLogin{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.information-of-inputs{
+	background-color:#f96776;
+	color: #ffffff;
+	font-family: monospace;
+	font-size: 15px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.nav-tabs li{
+	color:#ce405a;
+	font-weight: bolder;
+	font-size: 18px;
+	font-family:"Britannic Bold";
+}
+
+#checkboxTermsAndServices{
+	padding-top: 20px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+        	<!-- Metadat -->
+
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      <!--Firestore -->
+      <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+      <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+      <!-- MAIN.CSS EXTERNAL STYLESHEET -->
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+      <!-- SLICK SETUP CSS STYLESHEET -->
+
+      <script type="text/javascript" src="jquery.js"></script>
+    <title>Video News</title>
+  </head>
+  <body>
+     <div class="container-fluid" id="cen+-ter-container">
+                <div class="row" style="padding-top: 50px; padding-bottom: 30px; margin: 0px;">
+                  <div class="col-sm-6 wosg-news container-fluid"><img src="icons8_News_48px.png">WOSG Video News</div>
+                  <div class="col-sm-6 tonight-events container-fluid"><img src="icons8_TV_Program_48px.png">Tonight Events Videos</div>
+                </div>
+                <div class="list container-fluid" id="latest-news-main"><h5 class="title"><img src="icons8_New_48px_1.png">Latest News</h5></div>
+                <div class="list container-fluid" id="exclsive-news-main"><h5><img src="icons8_Private_48px_1.png">Exclusive</h5></div>
+                <div class="list container-fluid" id="burning-news-main"><h5 class="title"><img src="icons8_Fire_48px_1.png">Burning Issues</h5></div>
+                <div class="list container-fluid" id="legal-affairs-main"><h5 class="title"><img src="icons8_Law_48px_1.png">Legal Affairs</h5></div>
+                <div class="list container-fluid" id="health-news-main"><h5 class="title"><img src="icons8_Mother's_Health_48px.png">Health</h5></div>
+                <div class="list container-fluid" id="science-news-main"><h5 class="title"><img src="icons8_Science_Fiction_48px_1.png">Science</h5></div>
+                <div class="list container-fluid" id="technologg-news-main"><h5 class="title"><img src="icons8_Technology_Lifestyle_48px_2.png">Technology</h5></div>
+                <div class="list container-fluid" id="education-news-main"><h5 class="title"><img src="icons8_Graduation_Cap_48px_1.png">Education</h5></div>
+                <div class="list container-fluid" id="politics-news-main"><h5 class="title"><img src="icons8_Poll_48px_1.png">Politics</h5></div>
+                <div class="list container-fluid" id="sports-news-main"><h5 class="title"><img src="icons8_World_Cup_48px_3.png">Sports</h5></div>
+                <div class="list container-fluid" id="artist-news-main"><h5 class="title"><img src="icons8_Tango_48px_1.png">Artist</h5></div>
+                <div class="list container-fluid" id="business-news-main"><h5 class="title"><img src="icons8_Business_48px.png">Business</h5></div>
+                <div class="list container-fluid" id="events-news-main"><h5 class="title"><img src="icons8_Schedule_48px_1.png">Events</h5></div>
+                <div class="list container-fluid" id="election-news-main"><h5 class="title"><img src="icons8_Elections_48px_2.png">Election</h5></div>
+                <div class="list container-fluid" id="music-news-main"><h5 class="title"><img src="icons8_Music_48px_1.png">Music</h5></div>
+                <div class="list container-fluid" id="arts-news-main"><h5 class="title"><img src="icons8_Attack_48px_1.png">Arts</h5></div>
+                <div class="list container-fluid" id="film-news-main"><h5 class="title"><img src="icons8_Rain_Cloud_48px.png">Climate Change</h5></div>
+                <div class="list container-fluid" id="food-news-main"><h5 class="title"><img src="icons8_Food_48px_1.png">Food</h5></div>
+                <div class="list container-fluid" id="social-history-news-main"><h5 class="title"><img src="icons8_Historical_48px_1.png">Social History</h5></div>
+                <div class="list container-fluid" id="social-media-news-main"><h5 class="title"><img src="icons8_Micro_48px_1.png">Social Media</h5></div>
+                <div class="list container-fluid" id="inpictures-news-main"><h5 class="title"><img src="icons8_Google_Images_48px_1.png">InPictures</h5></div>
+                <div class="list container-fluid" id="lifestyle-news-main"><h5 class="title"><img src="icons8_Yoga_48px_1.png">Life Style</h5></div>
+                <div class="list container-fluid" id="celebrities-news-main"><h5 class="title"><img src="icons8_Recent_Celebrity_48px_1.png">Celebrities</h5></div>
+                <div class="list container-fluid" id="gossip-news-main"><h5 class="title"><img src="icons8_User_Groups_48px_1.png">Gossip</h5></div>
+                <div class="list container-fluid" id="wog-news-main"><h5 class="title"><img src="icons8_News_48px.png">WOG</h5></div>
+                <div class="list container-fluid" id="BNL-news-main"><h5 class="title"><img src="icons8_Gambia_48px_1.png">Banjul Night Live</h5></div>
+        </div>
+
+    <!-- Scripts -->
+
+    <script type="text/javascript" src="javascript.js"></script>
+    <script type="text/javascript" src="thedom.js"></script>
+  </body>
+</html>
